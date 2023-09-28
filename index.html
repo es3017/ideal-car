@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Car</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .header {
+            text-align: center;
+        }
+        .logo {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="car.png" alt="Car Finders Inc Logo" class="logo">
+        <h1>Ideal Car</h1>
+    </div>
+    <form action="submit_profile.php" method="get">
+        <fieldset>
+            <legend>Car Information</legend>
+            <label for="manufacturer">Manufacturer:</label>
+            <select id="manufacturer" name="manufacturer">
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="ford">Ford</option>
+                <option value="honda">Honda</option>
+                
+            </select>
+            <br><br>
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color">
+            <br><br>
+            <label>Drive Options:</label>
+            <input type="checkbox" id="4wheel" name="driveOptions[]" value="4Wheel">
+            <label for="4wheel">4-Wheel Drive</label>
+            <input type="checkbox" id="awd" name="driveOptions[]" value="AWD">
+            <label for="awd">All-Wheel Drive</label>
+          
+            <br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="license">License Plate:</label>
+            <input type="text" id="license" name="license">
+            <br><br>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Safety Features</legend>
+            <label for="airbags">Airbags:</label>
+            <input type="checkbox" id="airbags" name="safetyFeatures[]" value="Airbags">
+            <br>
+            <label for="abs">Anti-lock Braking System (ABS):</label>
+            <input type="checkbox" id="abs" name="safetyFeatures[]" value="ABS">
+            <br>
+            <label for="esc">Electronic Stability Control (ESC):</label>
+            <input type="checkbox" id="esc" name="safetyFeatures[]" value="ESC">
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Entertainment and Technology</legend>
+            <label for="infotainment">Infotainment System:</label>
+            <input type="radio" id="infotainment" name="entertainment" value="Infotainment">
+            <br>
+            <label for="navigation">Navigation System:</label>
+            <input type="radio" id="navigation" name="entertainment" value="Navigation">
+            <br>
+            <label for="soundSystem">Sound System:</label>
+            <select id="soundSystem" name="soundSystem">
+                <option value="premium">Premium</option>
+                <option value="standard">Standard</option>
+                <option value="custom">Custom</option>
+            </select>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
